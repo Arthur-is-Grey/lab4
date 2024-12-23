@@ -1,0 +1,60 @@
+<!DOCTYPE html>  
+<html lang="mn">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Responsive Layout</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            margin: 0;  
+            padding: 0;  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+            height: 100vh;  
+            background-color: #f0f0f0;  
+        }  
+
+        .container {  
+            display: flex;  
+            flex-direction: column; /* Stacked layout by default (mobile) */  
+            width: 100%;  
+            max-width: 1200px;  
+        }  
+
+        .item {  
+            padding: 20px;  
+            margin: 10px;  
+            border-radius: 5px;  
+            color: white;  
+        }  
+
+        .item1 { background-color: #4CAF50; } /* Green */  
+        .item2 { background-color: #2196F3; } /* Blue */  
+        .item3 { background-color: #FF5722; } /* Red */  
+        .item4 { background-color: #9E9E9E; } /* Grey */  
+
+        /* Desktop styles */  
+        @media(min-width: 768px) {  
+            .container {  
+                flex-direction: row; /* Side-by-side layout for desktop */  
+                flex-wrap: wrap;  
+            }  
+
+            .item {  
+                flex: 1 1 calc(50% - 20px); /* Two items per row */  
+                margin: 10px;  
+            }  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="container">  
+        <div class="item item1">Item 1</div>  
+        <div class="item item2">Item 2</div>  
+        <div class="item item3">Item 3</div>  
+        <div class="item item4">Item 4</div>  
+    </div>  
+</body>  
+</html>
